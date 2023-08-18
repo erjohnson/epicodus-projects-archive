@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: nigerian_prince_development
+
+test:
+  adapter: postgresql
+  database: nigerian_prince_test

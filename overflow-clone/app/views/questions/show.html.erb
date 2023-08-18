@@ -1,0 +1,11 @@
+<h2><%= @question.content %></h2>
+<br>
+<%= link_to "Add an answer", new_question_answer_path(@question), class: "btn btn-lg btn-primary", id: "new_link", remote: true %>
+<br>
+<h3>Answers:</h3>
+<br>
+<div id="answers_list">
+  <%= render @answers %>
+</div>
+
+

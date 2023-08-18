@@ -1,0 +1,11 @@
+<div class="col-sm-10 col-md-offset-1 col-md-8 col-md-offset-2">
+  <div class="text-center">
+    <br>
+      <%= link_to "Add Location", new_location_path, class: "btn btn-lg btn-primary", remote: true %>
+  </div>
+  <hr>
+  <div id="location-list">
+      <%= render @locations %>
+  </div>
+</div>
+<div id="location-modal" class="modal fade"></div>

@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: raven_app_development
+
+test:
+  adapter: postgresql
+  database: raven_app_test

@@ -1,0 +1,15 @@
+<%= form_for @location do |f| %>
+  <%= render 'layouts/errors', :object => @location %>
+
+  <div>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :city %>
+    <br>
+    <%= f.text_field :city %>
+  </div>
+  <%= f.submit "Create" %>
+<% end %>

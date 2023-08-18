@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SelfieApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1><a href="/">Selfiez</a></h1>
+        <hr>
+      </div>
+      <div>
+        <ul class="navigation" role="navigation">
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </header>
+    <a href="" class="block-btn">Lemme Take A Selfie</a>
+    <%= yield %>
+  </div>
+</body>
+</html>

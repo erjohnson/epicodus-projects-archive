@@ -1,0 +1,21 @@
+<%= form_for @lesson, html: {class: "form"}, remote: true do |f| %>
+<h2>Add a Lesson</h2>
+  <%= render 'layouts/errors', :object => @lesson %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :url %>
+    <%= f.text_field :url, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :section %>
+    <%= f.text_field :section, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+<% end %>

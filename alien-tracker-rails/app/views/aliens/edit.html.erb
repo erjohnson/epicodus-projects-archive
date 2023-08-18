@@ -1,0 +1,26 @@
+<h1>Edit Alien</h1>
+
+<% if @alien.errors.any? %>
+  <p>Please fix these errors:</p>
+  <ul>
+    <% @alien.errors.full_messages.each do |message| %>
+      <li><p class="warning"><em><%= message %></em></p></li>
+    <% end %>
+  </ul>
+<% end %>
+<br>
+<form action="/aliens/<%= @alien.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="alien_name">Name</label>
+  <br>
+  <input id="alien_name" name="alien[name]" type="text" value="<%= @alien.name %>">
+  <br>
+  <br>
+  <label for="alien_description">Description</label>
+  <br>
+  <textarea rows="10" cols="50" id="alien_description" name="alien[description]" type="text" value="<%= @alien.description %>"></textarea>
+  <br>
+  <button class="btn">Edit Alien</button>
+</form>
+
+<p><a href="/aliens">Return to Alien listing</a></p>

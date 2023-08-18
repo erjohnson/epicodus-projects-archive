@@ -1,0 +1,35 @@
+body {
+  background: #fff;
+  color: #000;
+  font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.container {
+  padding: 1em;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 40em) {
+  .container {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+}
+
+@media all and (min-width: 55em) {
+  .c {
+    font-size: 130%;
+    line-height: 1.7;
+  }
+}

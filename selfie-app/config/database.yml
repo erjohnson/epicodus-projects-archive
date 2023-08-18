@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: selfie_app_development
+
+test:
+  adapter: postgresql
+  database: selfie_app_test

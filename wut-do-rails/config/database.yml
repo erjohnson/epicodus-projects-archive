@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: wut_do_development
+
+test:
+  adapter: postgresql
+  database: wut_do_test

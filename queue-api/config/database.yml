@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: queue_api_development
+
+test:
+  adapter: postgresql
+  database: queue_api_test

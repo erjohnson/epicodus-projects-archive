@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: sack_overflow_development
+
+test:
+  adapter: postgresql
+  database: sack_overflow_test

@@ -1,0 +1,13 @@
+<h2 class="text-center"><%= title %></h2>
+<br>
+<% locations.each do |location| %>
+  <div class="row text-center">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <%= link_to "#{location.name}", location_url(location.id) %>
+          <br>
+          <%= location.city %>, <%= location.state %>
+      </div>
+    </div>
+  </div>
+<% end %>

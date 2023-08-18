@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: aliens_development
+
+test:
+  adapter: postgresql
+  database: aliens_test

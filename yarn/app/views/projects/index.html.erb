@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Projects</h1>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <br>
+    <p><a href="/projects/new" class="btn btn-default">New Project</a></p>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <% @projects.each do |project| %>
+    <h2><a href="/projects/<%= project.id %>"><%= project.name %></a>&nbsp;&nbsp;&nbsp;
+      <small><%= project.total %> user stories</small></h2>
+    <% end %>
+  </div>
+</div>

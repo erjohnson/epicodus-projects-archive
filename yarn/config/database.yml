@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: user_stories_development
+
+test:
+  adapter: postgresql
+  database: user_stories_test

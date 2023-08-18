@@ -1,0 +1,15 @@
+<div class="c">
+  <h1>Log In</h1>
+  <br>
+  <%= form_tag sessions_path do %>
+    <div>
+      <%= label_tag :name %><br />
+      <%= text_field_tag :name, params[:name] %>
+    </div>
+    <div>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+    </div>
+    <%= submit_tag "log in", class: "block-btn2" %>
+  <% end %>
+</div>

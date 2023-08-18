@@ -1,0 +1,38 @@
+<% @user_form = true %>
+<div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="text-center">
+      <h2>Sign up</h2>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-user"></span> name</p>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "What's your name?" %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-envelope"></span> email</p>
+        <%= f.email_field :email, class: "form-control", placeholder: "What's your favorite email?" %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-lock"></span> password</p><% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "A super secret password." %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-lock"></span> confirm password</p>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm your secret password!" %>
+      </div>
+      <br>
+
+      <div class="text-center">
+        <%= f.submit "sign up", class: "btn btn-lg btn-primary"%>
+      </div>
+    <% end %>
+</div>

@@ -1,0 +1,5 @@
+<% if @question.upvote? %>
+  $('#edit_question_<%= @question.id %>').appendTo('#complete_questions');
+<% else %>
+  $('#edit_question_<%= @question.id %>').appendTo('#incomplete_questions');
+<% end %>

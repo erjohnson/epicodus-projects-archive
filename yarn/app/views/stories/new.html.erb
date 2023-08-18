@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>New Story for <%= @story.project.name %></h1>
+    <br>
+    <p><a href="/projects/<%= @story.project_id %>"><%= @story.project.name %></a></p>
+    <br>
+    <%= render('layouts/errors', :object => @story) %>
+    <p class="lead">A <a href="http://en.wikipedia.org/wiki/User_stor">user story</a> is a sentence or two in the language of the end user that captures what a user does, needs, or wants to do in an application.
+    <p class="lead"><em>"As a role, I want goal/desire."</em></p>
+    <br>
+    <form action="/projects/<%= @story.project.id %>/stories" method="post">
+      <div class="form-group">
+        <label for="story_name">User Story</label>
+        <input id="story_name" class="form-control" name="story[name]" type="text" value="<%= @story.name %>">
+      </div>
+      <button class="btn btn-default">Create Story</button>
+    </form>
+  </div>
+</div>

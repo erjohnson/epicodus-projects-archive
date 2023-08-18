@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RavenApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= @user_form ? 'user-form-page' : ''%>">
+
+<nav class="navbar navbar-default title-space" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">RAVEN</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to lessons_path do %>
+              <span class="glyphicon glyphicon-list"></span> lessons
+            <% end %>
+          </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              <span class="glyphicon glyphicon-user"></span> <%= current_user.name %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span> logout
+            <% end %>
+          </li>
+        <% else %>
+          <li><%= link_to "sign up", new_user_registration_path %></li>
+          <li><%= link_to "login", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <span id="flash-msg"></span>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

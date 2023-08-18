@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="media">
+      <a class="pull-left" href="<%= user_url(ticket.user) %>">
+        <%= image_tag ticket.user.avatar.url(:thumb), class: "media-object", alt: "#{ticket.user.name} avatar" %>
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading"><%= ticket.user.name %></h4>
+        <p><%= link_to "#{truncate(ticket.question, length: 40, separator: ' ', escape: false)}", ticket_url(ticket), class: "lead" %></p>
+        <p class="text-muted"><span class="glyphicon glyphicon-time"></span> <%= ticket.created_at.getlocal.strftime('%I:%M:%S %p // %F') %></p>
+      </div>
+    </div>
+</div>

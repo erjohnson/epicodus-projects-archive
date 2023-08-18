@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Edit <%= @project.name %></h1>
+    <br>
+    <br>
+    <%= render('layouts/errors', :object => @project) %>
+    <form action="/projects/<%= @project.id %>" method="post">
+      <input name="_method" type="hidden" value="patch">
+      <%= render('form') %>
+      <button class="btn btn-default">Update Project</button>
+    </form>
+  </div>
+</div>

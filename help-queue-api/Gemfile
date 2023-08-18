@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'pg'
+gem 'rake'
+gem 'activerecord'
+gem 'active_record_migrations'
+gem 'rspec', '~> 2.99'
+gem 'pry'
+gem 'shoulda-matchers'

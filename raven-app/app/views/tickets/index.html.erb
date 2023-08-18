@@ -1,0 +1,24 @@
+<div class="col-sm-10 col-md-offset-1 col-md-8 col-md-offset-2">
+  <div class="text-center">
+    <br>
+      <%= link_to "Ask For Help", new_ticket_path, class: "btn btn-lg btn-primary", remote: true %>
+  </div>
+  <hr>
+  <ul class="nav nav-tabs" role="tablist">
+    <li><a href="#open" role="tab" data-toggle="tab">Open</a></li>
+    <li><a href="#answered" role="tab" data-toggle="tab">Closed</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="open">
+      <div id="tickets_list">
+        <%= render @tickets %>
+      </div>
+    </div>
+    <div class="tab-pane" id="answered">
+      <%= render @tickets %>
+    </div>
+  </div>
+</div>
+<div id="ticket-modal" class="modal fade"></div>

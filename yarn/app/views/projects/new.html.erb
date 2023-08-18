@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Create New Project</h1>
+    <br>
+    <br>
+    <%= render('layouts/errors', :object => @project) %>
+    <form action="/projects/<%= @project.id %>" method="post">
+      <%= render('form') %>
+      <button class="btn btn-default">Create Project</button>
+    </form>
+  </div>
+</div>

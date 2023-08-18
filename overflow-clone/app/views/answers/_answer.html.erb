@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-3">
+    <%= form_for Vote.new, remote: true do |f| %>
+      <%= f.hidden_field :answer_id, :value => answer.id %>
+      <%= f.submit %>
+    <% end %>
+    <span class="vote"><%= answer.votes.count %></span></p>
+  </div>
+  <div class="col-md-9">
+    <%= answer.content %>
+    <br>
+    <%= answer.user.name %>
+  </div>
+</div>
+<br>
+<br>

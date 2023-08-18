@@ -1,0 +1,13 @@
+<h1>Alien Tracker</h1>
+
+<a href="/aliens/new" class="btn">New Alien</a>
+
+<ul>
+  <% @aliens.each do |alien| %>
+    <li>
+      <p>
+        <strong><a href="/aliens/<%= alien.id %>"><%= alien.name %></a></strong>
+      </p>
+    </li>
+  <% end %>
+</ul>

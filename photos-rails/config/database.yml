@@ -1,0 +1,10 @@
+
+
+development:
+  adapter: postgresql
+  database: selfies_development
+
+test:
+  adapter: postgresql
+  database: selfies_test
+

@@ -1,0 +1,25 @@
+<h1> Das Photo </h1>
+
+<%= image_tag @photo.picture.url %>
+
+<%= form_for(@tag) do |f| %>
+  <div class="form-group">
+    <%= f.hidden_field :photo_id, :value => @photo.id %>
+    <% if current_user %>
+    <%= f.hidden_field :tagged_by, :value => current_user.id %>
+    <% end %>
+    <%= f.label "User:" %>
+    <%= f.collection_select :user_id, User.all, :id, :email %>
+  </div>
+  <%= f.submit(:class => "btn btn-danger") %>
+<% end %>
+
+<%= form_for(@fav) do |f| %>
+  <div class="form-group">
+    <% if current_user %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <% end %>
+    <%= f.hidden_field :photo_id, :value => @photo.id %>
+   </div>
+  <%= f.submit(:class => "btn btn-success") %>
+<% end %>

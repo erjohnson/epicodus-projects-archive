@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selfies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+          <%= link_to "Selfiez", root_path, :class=>"navbar-brand" %>
+      <% if current_user %>
+          <li><p class="navbar-text">Signed in as <%= current_user.email %></p></li>
+          <li><%= link_to "Log Out", logout_path, :class=>"navbar-link" %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", signup_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+    <%= yield %>
+</div>
+</body>
+</html>

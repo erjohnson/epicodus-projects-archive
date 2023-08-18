@@ -1,0 +1,76 @@
+// Base Styles
+
+@import 'reset';
+@import 'typography';
+
+body {
+  background: #fff;
+  color: #000;
+  @include primary-font;
+  padding: 0;
+}
+a {
+  color: #808080;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #e51837;
+}
+p {
+  margin: 0 0 1em;
+}
+img, object, video {
+  max-width: 100%;
+  border: 0;
+}
+a img {
+  border: 0;
+  outline: 0;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-weight: normal;
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ccc;
+}
+h1 a, h2 a, h3 a {
+  display: block;
+  color: #000;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: #e51837;
+}
+blockquote {
+  border-left: 0.5em solid #ddd;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+small {
+  color: #e51837;
+}
+
+input, textarea {
+  border: 1px solid #000;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+::-webkit-input-placeholder {
+  color: #808080;
+}
+:-moz-placeholder {
+    color: #808080;
+}

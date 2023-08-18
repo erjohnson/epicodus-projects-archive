@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Document Title & Description -->
+		<title>FizzBuzz Test</title>
+		<meta name="description" content="">
+
+
+	</head>
+
+	<body>
+
+
+            <script type="text/javascript">
+                
+                    var fb = prompt("Please Enter A Number To FizzBuzz");
+                    var num = 1;
+                        for (num; num <= fb; num++) {
+                            if ((num % 3 == 0) && (num % 5 !== 0))
+                            document.write("Fizz" + "<br>");
+                                else if ((num % 5 == 0) && (num % 3 !== 0))
+                                document.write("Buzz" + "<br>");
+                                    else if ((num % 3 == 0) && (num % 5 == 0))
+                                    document.write("FizzBuzz" + "<br>");
+                                        else if ((num % 3 !== 0) && (num % 5 !== 0))
+                                        document.write(num + "<br>");
+                        }
+                    
+                    
+            </script>
+
+        
+	</body>
+</html>

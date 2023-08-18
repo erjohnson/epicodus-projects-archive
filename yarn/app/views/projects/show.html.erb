@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1><%= @project.name %></h1>
+    <br>
+    <div class="btn-group">
+    <a href="/projects/<%= @project.id %>/edit" class="btn btn-default">Edit Project</a>
+    <a href="/projects/<%= @project.id %>"
+      class="btn btn-default"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete Project</a>
+    </div>
+    <br>
+    <br>
+    <p class="lead"><%= @project.description %></p>
+    <p><a><%= @project.link %></a></p>
+    <br>
+    <h3>User Stories</h3>
+    <br>
+    <p><a href="/projects/<%= @project.id %>/stories/new" class="btn btn-default">Add Story</a></p>
+    <br>
+    <ul>
+      <% @project.stories.each do |story| %>
+      <li><p class="lead"><%= story.name %>&nbsp;&nbsp;
+        <a href="/projects/<%= @project.id %>/stories/<%= story.id %>"
+         data-confirm="You sure?"
+         data-method="delete"
+         rel="nofollow"><span class="glyphicon glyphicon-remove text-danger"></span></a></p></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

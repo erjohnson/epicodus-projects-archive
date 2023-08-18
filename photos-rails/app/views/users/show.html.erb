@@ -1,0 +1,9 @@
+<h1><%= @user.email %></h1>
+
+<div class="row">
+  <% @user.photos.each do |photo| %>
+  <div class="col-sm-6 col-md-3">
+    <a href = "<%= photo_path(photo.id) %>"><%= image_tag photo.picture.url, :class=>"thumbnail" %></a>
+  </div>
+  <% end %>
+</div>

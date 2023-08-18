@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: idea_deck_development
+
+test:
+  adapter: postgresql
+  database: idea_deck_test

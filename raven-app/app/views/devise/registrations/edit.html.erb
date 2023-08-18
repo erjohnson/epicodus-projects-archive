@@ -1,0 +1,50 @@
+<% @user_form = true %>
+<div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="text-center">
+      <%= image_tag @user.avatar.url(:thumb), class: "profile-avatar", alt: "#{@user.name} avatar" %>
+      <h2>Edit <%= @user.name %></h2>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-picture"></span> Avatar</p>
+        <%= f.file_field :avatar %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-envelope"></span> email</p>
+        <%= f.email_field :email, class: "form-control", placeholder: "What's your favorite email?" %>
+      </div>
+      <br>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-lock"></span> new password<i>
+          <br><small>(leave blank if you don't want to change it)</i></small></p><% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "A new super secret password." %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-lock"></span> confirm new password</p>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm your new secret password!" %>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <p class="lead"><span class="glyphicon glyphicon-lock"></span> current password</p>
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Enter your password to confirm changes..." %>
+      </div>
+      <br>
+
+      <div class="text-center">
+        <%= f.submit "update", class: "btn btn-lg btn-primary"%>
+      </div>
+    <% end %>
+</div>
+

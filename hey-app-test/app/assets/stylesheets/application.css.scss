@@ -1,0 +1,192 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/************Reset**************/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, object, iframe, fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+legend {
+  display: none;
+}
+/************End Reset**************/
+
+/************Global**************/
+body {
+  background: #DDDDDD;
+  color: #111111;
+  font: 100%/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+a {
+  color: #808080;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #e51837;
+}
+p {
+  margin: 0 0 1em;
+}
+img, object, video {
+  max-width: 100%;
+  border: 0;
+}
+a img {
+  border: 0;
+  outline: 0;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-weight: normal;
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ccc;
+}
+h1 a, h2 a, h3 a {
+  display: block;
+  color: #000;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: #e51837;
+}
+blockquote {
+  border-left: 0.5em solid #ddd;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+small {
+  color: #e51837;
+}
+
+input {
+  font-size: 110%;
+}
+
+input, textarea {
+  border: 0;
+  border-radius: .25em
+}
+
+input {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: #808080;
+}
+:-moz-placeholder {
+    color: #808080;
+}
+/************End Global**************/
+.container {
+  max-width: 40em;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.c {
+  text-align: center;
+}
+
+@media all and (min-width: 40em) {
+  body {
+     font-size: 120%;
+      line-height: 1.5;
+  }
+}
+
+@media all and (min-width: 55em) {
+  body {
+     font-size: 130%;
+      line-height: 1.7;
+  }
+}
+
+input[type=submit] {
+  color: #fff;
+  background: #439fe0;
+  display: inline-block;
+  margin: 1.5em 0;
+  font-size: 110%;
+  padding: .75rem 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #194ba3;
+  border-radius: .25em
+}
+
+.block-btn {
+  color: #fff;
+  background: #439fe0;
+  display: inline-block;
+  margin: 1.5em 0;
+  font-size: 110%;
+  padding: .75rem 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #194ba3;
+  border-radius: .25em
+}
+
+.block-btn:hover, .block-btn:focus {
+  color: #fff;
+  background: #439fe0;
+}
+
+.block-btn2 {
+  color: #fff;
+  background: #3D9970;
+  display: inline-block;
+  margin: 1.5em 0;
+  font-size: 110%;
+  padding: .75rem 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #245941;
+  border-radius: .25em
+}
+
+.block-btn2:hover, .block-btn2:focus {
+  color: #fff;
+  background: #3D9970;
+}
+

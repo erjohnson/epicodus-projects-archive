@@ -1,0 +1,11 @@
+<div class="c">
+  <% if current_user %>
+  <%= link_to "New Location", new_location_path, class: "block-btn2" %>
+  <h1>Locations</h1>
+  <br>
+  <%= render @locations %>
+  <% else %>
+  <p><%= link_to "sign up", new_user_path, class: "block-btn" %> &nbsp;&nbsp; <%= link_to "log in", new_session_path, class: "block-btn2" %>
+  </p>
+  <% end %>
+</div>

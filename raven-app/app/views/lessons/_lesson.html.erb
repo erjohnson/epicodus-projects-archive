@@ -1,0 +1,9 @@
+<%= link_to lesson_url(lesson), class: "list-group-item" do %>
+  <% if lesson.tickets.count == 1 %>
+    <span class="badge"><%= lesson.tickets.count %> ticket</span>
+  <% else %>
+    <span class="badge"><%= lesson.tickets.count %> tickets</span>
+  <% end %>
+  <h4 class="list-group-item-heading"><%= lesson.name %></h4>
+  <p class="list-group-item-text"><%= lesson.section %></p>
+<% end %>
